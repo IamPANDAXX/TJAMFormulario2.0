@@ -1,0 +1,256 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+/**********barra de progreso***********/
+
+.barra-progreso{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #dddddd;
+  overflow: hidden;
+  height: 15px;
+  margin: 20px 0;
+  box-shadow: 0 0 15px #dddddd;
+}
+
+.barra{
+  height: 100%;
+  width: 0%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: width 0.3s ease;
+}
+
+/**************************************/
+.contenedor-contenedor{
+    width: 90%;
+    display: grid;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+h2{
+    margin-left: 15px;
+    font-size: clamp(20px, 2vw, 10px);
+
+}
+
+table{
+    border-collapse: collapse;
+    width: 60%;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: clamp(10px, 2vw, 20px);
+}
+th, td{
+    border: 0px solid #999;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background-color: #eee;
+}
+h4{
+    margin-left: 15px;
+}
+.contenedor-general{
+    display: grid;
+    gap: 15px;
+    
+}
+
+/*.contenedor-dos{
+    display: grid;
+    gap: 15px;
+}
+.contenedor-tres{
+    display: grid;
+    gap: 15px;
+}
+.contenedor-cuatro{
+    display: grid;
+    gap: 15px;
+}*/
+.votacion {
+    display: flex;
+    margin-left: 15px;
+    width: fit-content;
+    border-radius: 8px;
+  }
+
+  .votar {
+    margin: 0;
+    margin-right: 8px;
+    cursor: pointer;
+
+  }
+
+  .votacion p {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  textarea,
+  input[type="file"],
+  select{
+    width: 80%;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(16px, 2vw, 8px);
+    margin-left: 15px;
+  }
+
+   textarea:focus,
+  input[type="file"]:focus,
+  select:focus{
+    border-color: #777777;
+    outline: none;
+    box-shadow: 0 0 5px #000000;
+  }
+
+  select{
+    height: 25px;
+  }
+
+
+  .contenedor-button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .enviar-formulario{
+    background-color: #aa3053;
+    color: #ffffff;
+    width: 100px;
+    display: flex;
+    margin-left: 15px;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0px solid #ffffff;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  }
+
+  .enviar-formulario:hover{
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .siguiente-formulario{
+    background-color: #30aa38;
+    color: #ffffff;
+    width: 100px;
+    display: flex;
+    margin-left: 15px;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0px solid #ffffff;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  }
+
+  .siguiente-formulario:hover{
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .anterior-formulario{
+    background-color: #30aa38;
+    color: #ffffff;
+    width: 100px;
+    display: flex;
+    margin-left: 15px;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0px solid #ffffff;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  }
+
+  .anterior-formulario:hover{
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .form-step{
+    transition: opacity 0.6s ease;
+  }
+  /*********error mensaje**********/
+
+  .mensaje-error{
+    color: #aa0000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  /**********mensaje de formulario completo********/
+
+  .toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #4BB543;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  right: 20px;
+  bottom: 30px;
+  font-family: sans-serif;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.5s, bottom 0.5s ease;
+}
+
+.toast.show {
+  visibility: visible;
+  bottom: 50px;
+  opacity: 1;
+}
+
+
+
+  .error-toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #b54343;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  right: 20px;
+  bottom: 30px;
+  font-family: sans-serif;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.5s, bottom 0.5s ease;
+}
+
+.error-toast.show {
+  visibility: visible;
+  bottom: 50px;
+  opacity: 1;
+}
+
+/*********Siguiente paso*********/
+#step-2{
+  display: none;
+}

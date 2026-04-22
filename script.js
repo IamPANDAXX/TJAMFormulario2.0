@@ -122,6 +122,7 @@ function validarTodo() {
     //mensajes de errores
     if (!todoBien) {
         errorToast();
+        return;
     }
     showToast();
 }

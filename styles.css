@@ -155,7 +155,7 @@ select{
     border: 1px solid #ccc;
     padding: 8px;
     font-size: 14px;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
 }
 
 textarea:focus,
@@ -175,7 +175,7 @@ textarea.comentario{
   width: 100%;
   min-height: 120px;
   padding: 12px;
-  margin-left: 15px;
+  /*margin-left: 15px;*/
 
   border: 1px solid transparent;
   border-radius: 10px;
